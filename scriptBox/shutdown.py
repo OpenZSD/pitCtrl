@@ -9,16 +9,16 @@ import subprocess
 GPIO.setmode(GPIO.BOARD)  
 
 # use the same pin that is used for the reset button (one button to rule them all!)
-GPIO.setup(5, GPIO.IN, pull_up_down = GPIO.PUD_UP)  
+GPIO.setup(5, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)  
 
-oldButtonState1 = True
+oldButtonState1 = False
 
 while True:
     #grab the current button state
     buttonState1 = GPIO.input(5)
 
     # check to see if button has been pushed
-    if buttonState1 != oldButtonState1 and buttonState1 == False:
+    if buttonState1 != oldButtonState1 and buttonState1 == TRUE:
       subprocess.call("shutdown -h now", shell=True, 
         stdout=subprocess.PIPE, stderr=subprocess.PIPE)
       oldButtonState1 = buttonState1

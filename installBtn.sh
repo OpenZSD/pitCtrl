@@ -1,5 +1,5 @@
 #!/bin/bash
-cp ./. /home/pi
+cp -a ./. /home/pi
 cd /home/pi
 
 sudo apt-get install update
