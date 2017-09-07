@@ -1,4 +1,6 @@
 #!/bin/bash
+cp ./. /home/pi
+cd /home/pi
 
 sudo apt-get install update
 sudo apt-get install python-dev
