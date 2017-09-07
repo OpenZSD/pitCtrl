@@ -18,7 +18,7 @@ def exitEmulator(channel):
                 print('kill -QUIT %s' % pid)
         except IOError:
             continue
-GPIO.add_event_detect(17, GPIO.RISING, callback=exitEmulator, bouncetime=500)
+GPIO.add_event_detect(5, GPIO.RISING, callback=exitEmulator, bouncetime=500)
 
 while True:
     sleep(10)
