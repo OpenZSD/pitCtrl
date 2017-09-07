@@ -2,4 +2,5 @@
 
 rm ./scripts/current.py
 cp ./scriptBox/shutdown.py ./scripts/current.py
-sudo chmod 777 
+chmod 777 ./scripts/current.py
+
